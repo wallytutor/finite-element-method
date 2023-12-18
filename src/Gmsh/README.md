@@ -19,3 +19,10 @@ learning methodology.
     - Defining constants with ONELAB
     - ONELAB parameters can be overridden through CLI `-setnumber <var> <val>`
     - Setting general parameters in scripts
+
+1. [Built-in functions, holes in surfaces, annotations, entity colors](t4.geo)
+    - As for rotation, circle arcs are also limited in default kernel
+    - A surface with `N` holes needs `N+1` curve loops to be defined
+    - The first curve loop defines the external shell of the surface
+    - A `View` can be created for annotations, *i.e.* for presentations
+    - Click capture may be useful for getting surfaces in complex geometries
