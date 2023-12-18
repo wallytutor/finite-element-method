@@ -26,3 +26,7 @@ learning methodology.
     - The first curve loop defines the external shell of the surface
     - A `View` can be created for annotations, *i.e.* for presentations
     - Click capture may be useful for getting surfaces in complex geometries
+
+1. [Mesh sizes, macros, loops, holes in volumes](t5.geo)
+    - Scaling of all mesh dimensions can be done with `-clscale <val>`
+    
