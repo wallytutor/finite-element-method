@@ -235,6 +235,14 @@ Transfinite Curve{13, -17} = 25;
 Transfinite Surface{ps2};
 Recombine Surface {ps1, ps2};
 
+Extrude {0, 0, 0.2} { Surface{ps1, ps2}; Layers{1}; Recombine; }
+
+// -----------------------------------------------------------------------------
+//
+//  Boundary layer
+//
+// -----------------------------------------------------------------------------
+
 Field[4] = BoundaryLayer;
 Field[4].CurvesList = {1:7};
 Field[4].PointsList= {1, 8};    
@@ -259,6 +267,27 @@ BoundaryLayer Field = 4;
 // Field[5].IntersectMetrics = 1;
 // BoundaryLayer Field = 5;
 
+// -----------------------------------------------------------------------------
+//
+//  Patch naming
+//
+// -----------------------------------------------------------------------------
+
+Physical Volume("volume") = {1, 2};
+Physical Surface("frontAndBack") = {1, 2, 30, 36};
+Physical Surface("inlet") = {33};
+Physical Surface("outlet") = {11};
+Physical Surface("flap1") = {18, 19, 20, 21};
+Physical Surface("flap2") = {22, 23, 24, 25};
+Physical Surface("flap3") = {26, 27, 28, 29};
+Physical Surface("shell") = {4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 16, 17, 32, 34};
+
+// -----------------------------------------------------------------------------
+//
+//  Meshing
+//
+// -----------------------------------------------------------------------------
+
 Mesh.SaveAll = 1;
 Mesh.MshFileVersion = 2.2;
 Mesh.MeshSizeFactor = 0.5;
@@ -267,7 +296,11 @@ Mesh.MeshSizeMax = 0.10;
 Mesh.Algorithm = 6;
 Mesh.Smoothing = 200;
 
-Mesh 2;
+// Mesh 1;
+// RefineMesh;
+
+// Save "geometry.unv";
+// Save "geometry.msh";
 
 // -----------------------------------------------------------------------------
 //
