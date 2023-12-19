@@ -48,7 +48,8 @@ The book series by O.C. Zienkiewicz and collaborators will be included later sin
 ### Week 1
 
 <details>
-<summary></summary><br>
+<summary>Week 1</summary><br>
+
 - [ ] Follow 21 tutorials provided with Gmsh
 - [ ] Follow 7 extended tutorials provided with Gmsh
 - [ ] Follow [this](https://www.youtube.com/playlist?list=PL4eMS3gkRNXcvNnawxzuzRlFDa5CseoQV) short course on FreeCAD.
