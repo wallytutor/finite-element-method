@@ -45,8 +45,6 @@ For materials that were not cited above, here follow the links:
 
 The book series by O.C. Zienkiewicz and collaborators will be included later since its in depth and general approach trespasses my current capacity on how to organize their study. After learning the basics over the next months I hope to be able to skecth a learning strategy to go over those books and feed this time-line.
 
-### Week 1
-
 <details>
 <summary>Week 1</summary><br>
 
@@ -61,7 +59,8 @@ The book series by O.C. Zienkiewicz and collaborators will be included later sin
 - [ ] Intro to the Finite Element Method | Lectures 1
 </details>
 
-### Week 2
+<details>
+<summary>Week 2</summary><br>
 
 - [ ] Nithiarasu (2016), chapter 3 (1/2)
 - [ ] Langtangen (2016), chapter 2 (2/3) 
@@ -70,8 +69,10 @@ The book series by O.C. Zienkiewicz and collaborators will be included later sin
 - [ ] Solid Mechanics | Theory (all at once)
 - [ ] Intro to Continuum Mechanics | Seminars 1
 - [ ] Intro to the Finite Element Method | Lectures 2
+</details>
 
-### Week 3
+<details>
+<summary>Week 3</summary><br>
 
 - [ ] Nithiarasu (2016), chapter 3 (2/2)
 - [ ] Langtangen (2016), chapter 2 (3/3) 
@@ -80,8 +81,10 @@ The book series by O.C. Zienkiewicz and collaborators will be included later sin
 - [ ] Engineering Statics | Lectures videos 15 to 18
 - [ ] Intro to Continuum Mechanics | Seminars 2
 - [ ] Intro to the Finite Element Method | Lectures 3
+</details>
 
-### Week 4
+<details>
+<summary>Week 4</summary><br>
 
 - [ ] Nithiarasu (2016), chapter 4
 - [ ] Langtangen (2016), chapter 3 (1/5) 
@@ -89,120 +92,161 @@ The book series by O.C. Zienkiewicz and collaborators will be included later sin
 - [ ] Engineering Statics | Lectures videos 19 to 22
 - [ ] Intro to Continuum Mechanics | Seminars 3
 - [ ] Intro to the Finite Element Method | Lectures 4
+</details>
 
-### Week 5
+<details>
+<summary>Week 5</summary><br>
 
 - [ ] Nithiarasu (2016), chapter 5
 - [ ] Langtangen (2016), chapter 3 (2/5) 
 - [ ] Engineering Statics | Lectures videos 23 to 24
 - [ ] Intro to Continuum Mechanics | Seminars 4
 - [ ] Intro to the Finite Element Method | Lectures 5
+</details>
 
-### Week 6
+<details>
+<summary>Week 6</summary><br>
 
 - [ ] Nithiarasu (2016), chapter 6
 - [ ] Langtangen (2016), chapter 3 (3/5) 
 - [ ] Intro to Continuum Mechanics | Seminars 5
 - [ ] Intro to the Finite Element Method | Lectures 6
+</details>
 
-### Week 7
+<details>
+<summary>Week 7</summary><br>
 
 - [ ] Nithiarasu (2016), chapter 7 (1/3)
 - [ ] Langtangen (2016), chapter 3 (4/5) 
 - [ ] Intro to Continuum Mechanics | Seminars 6
 - [ ] Intro to the Finite Element Method | Lectures 7
+</details>
 
-### Week 8
+<details>
+<summary>Week 8</summary><br>
 
 - [ ] Nithiarasu (2016), chapter 7 (2/3)
 - [ ] Langtangen (2016), chapter 3 (5/5) 
 - [ ] Barzegari's  notebook associated to Langtangens chapter 3
 - [ ] Intro to Continuum Mechanics | Seminars 7
 - [ ] Intro to the Finite Element Method | Lectures 8
+</details>
 
-### Week 9
+<details>
+<summary>Week 9</summary><br>
 
 - [ ] Nithiarasu (2016), chapter 7 (3/3)
 - [ ] Langtangen (2016), chapter 4 (1/2) 
 - [ ] Intro to Continuum Mechanics | Seminars 8
 - [ ] Intro to the Finite Element Method | Lectures 9
+</details>
 
-### Week 10
+<details>
+<summary>Week 10</summary><br>
 
 - [ ] Nithiarasu (2016), chapter 8
 - [ ] Langtangen (2016), chapter 4 (2/2) 
 - [ ] Barzegari's  notebook associated to Langtangens chapter 4
 - [ ] Intro to Continuum Mechanics | Seminars 9
 - [ ] Intro to the Finite Element Method | Lectures 10
+</details>
 
-### Week 11
+<details>
+<summary>Week 11</summary><br>
 
 - [ ] Nithiarasu (2016), chapter 9
 - [ ] Langtangen (2016), chapter 5 (1/3) 
 - [ ] Intro to Continuum Mechanics | Seminars 10
+</details>
 
-### Week 12
+<details>
+<summary>Week 12</summary><br>
 
 - [ ] Nithiarasu (2016), chapter 10
 - [ ] Langtangen (2016), chapter 5 (2/3) 
+</details>
 
-### Week 13
+<details>
+<summary>Week 13</summary><br>
 
 - [ ] Nithiarasu (2016), chapter 11
 - [ ] Langtangen (2016), chapter 5 (3/3) 
 - [ ] Barzegari's  notebook associated to Langtangens chapter 5
+</details>
 
-### Week 14
+<details>
+<summary>Week 14</summary><br>
 
 - [ ] Nithiarasu (2016), chapter 12
 - [ ] Langtangen (2016), chapter 6 (1/2) 
+</details>
 
-### Week 15
+<details>
+<summary>Week 15</summary><br>
 
 - [ ] Nithiarasu (2016), chapter 13
 - [ ] Langtangen (2016), chapter 6 (2/2) 
 - [ ] Barzegari's  notebook associated to Langtangens chapter 6
+</details>
 
-### Week 16
+<details>
+<summary>Week 16</summary><br>
 
 - [ ] Nithiarasu (2016), chapter 14 and 15
 - [ ] Langtangen (2016), chapter 7 
 - [ ] Barzegari's  notebook associated to Langtangens chapter 7
+</details>
 
-### Week 17
+<details>
+<summary>Week 17</summary><br>
 
 - [ ] Langtangen (2016), chapter 8
 - [ ] Barzegari's  notebook associated to Langtangens chapter 8
+</details>
 
-### Week 18
+<details>
+<summary>Week 18</summary><br>
 
 - [ ] Langtangen (2016), chapter 9 (1/4)
+</details>
 
-### Week 19
+<details>
+<summary>Week 19</summary><br>
 
 - [ ] Langtangen (2016), chapter 9 (2/4)
+</details>
 
-### Week 20
+<details>
+<summary>Week 20</summary><br>
 
 - [ ] Langtangen (2016), chapter 9 (3/4)
+</details>
 
-### Week 21
+<details>
+<summary>Week 21</summary><br>
 
 - [ ] Langtangen (2016), chapter 9 (4/4)
 - [ ] Barzegari's  notebook associated to Langtangens chapter 9
+</details>
 
-### Week 22
+<details>
+<summary>Week 22</summary><br>
 
 - [ ] Langtangen (2016), chapter 10
+</details>
 
-### Week 23
+<details>
+<summary>Week 23</summary><br>
 
 - [ ] Langtangen (2016), chapter 11
+</details>
 
-### Week 24
-
+<details>
+<summary>Week 24</summary><br>
 ...
+</details>
 
-### Week 25
-
+<details>
+<summary>Week 25</summary><br>
 ...
+</details>
