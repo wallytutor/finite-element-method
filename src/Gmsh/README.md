@@ -29,4 +29,39 @@ learning methodology.
 
 1. [Mesh sizes, macros, loops, holes in volumes](t5.geo)
     - Scaling of all mesh dimensions can be done with `-clscale <val>`
-    
+
+1. [Transfinite meshes, deleting entities](t6.geo)
+    - Use `Delete` for removing `Surface` and `Curve` entities
+    - With `Transfinite Curve` specify the number of grid points over a curve
+    - Transfinite of more than 4 points need 4 corners to be provided manually
+    - Use `Mesh.Smoothing` to apply smoothing for a more regular mesh
+
+1. [Background meshes](t7.geo)
+
+1. [Post-processing, image export and animations](t8.geo)
+
+1. [Plugins](t9.geo)
+
+1. [Mesh size fields](t10.geo)
+
+1. [Unstructured quadrangular meshes](t11.geo)
+
+1. [Cross-patch meshing with compounds](t12.geo)
+
+1. [Remeshing an STL file without an underlying CAD model](t13.geo)
+
+1. [Homology and cohomology computation](t14.geo)
+
+1. [Embedded points, lines and surfaces](t15.geo)
+
+1. [Constructive Solid Geometry, OpenCASCADE geometry kernel](t16.geo)
+
+1. [Anisotropic background mesh](t17.geo)
+
+1. [Periodic meshes](t18.geo)
+
+1. [Thrusections, fillets, pipes, mesh size from curvature](t19.geo)
+
+1. [STEP import and manipulation, geometry partitioning](t20.geo)
+
+1. [Mesh partitioning](t21.geo)
