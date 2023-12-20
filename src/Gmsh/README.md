@@ -37,6 +37,9 @@ learning methodology.
     - Use `Mesh.Smoothing` to apply smoothing for a more regular mesh
 
 1. [Background meshes](t7.geo)
+    - Mesh sizes can be specified accurately by providing a background mesh
+    - Background meshes *BM* are composed, *e.g* of scalar triangles `ST`
+    - If the *BM* is based on an actual mesh, create `NewModel` (see comment)
 
 1. [Post-processing, image export and animations](t8.geo)
 
