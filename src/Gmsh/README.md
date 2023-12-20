@@ -42,6 +42,10 @@ learning methodology.
     - If the *BM* is based on an actual mesh, create `NewModel` (see comment)
 
 1. [Post-processing, image export and animations](t8.geo)
+    - In Gmsh a `View` is a post-processing dataset maniputation
+    - For large datasets do not use *parsed* format, but MSH instead
+    - Text in 2D and 3D are created with `T2` and `T3` (also see t4.geo)
+    - It is possible to export animations directly from *time steps*.
 
 1. [Plugins](t9.geo)
 
