@@ -49,9 +49,8 @@ The book series by O.C. Zienkiewicz and collaborators will be included later sin
 <summary>Week 1</summary><br>
 
 - [ ] Follow 21 tutorials provided with Gmsh
-- [ ] Follow 7 extended tutorials provided with Gmsh
-- [ ] Follow [this](https://www.youtube.com/playlist?list=PL4eMS3gkRNXcvNnawxzuzRlFDa5CseoQV) short course on FreeCAD.
-- [ ] Follow [this](https://www.youtube.com/playlist?list=PL6fjYEpJFi7Wu9ZFlak7r0QgrF0aNi8H1) tutorial on FreeFEM without practicing.
+- [x] Follow [this](https://www.youtube.com/playlist?list=PL4eMS3gkRNXcvNnawxzuzRlFDa5CseoQV) short course on FreeCAD.
+- [x] Follow [this](https://www.youtube.com/playlist?list=PL6fjYEpJFi7Wu9ZFlak7r0QgrF0aNi8H1) tutorial on FreeFEM without practicing.
 - [ ] Nithiarasu (2016), chapters 1 and 2
 - [ ] Langtangen (2016), chapters 1 and 2 (1/3)
 - [ ] Barzegari's  notebook associated to Langtangens chapter 1
@@ -154,6 +153,7 @@ The book series by O.C. Zienkiewicz and collaborators will be included later sin
 <details>
 <summary>Week 11</summary><br>
 
+- [ ] Follow 7 extended tutorials provided with Gmsh (Python)
 - [ ] Nithiarasu (2016), chapter 9
 - [ ] Langtangen (2016), chapter 5 (1/3) 
 - [ ] Intro to Continuum Mechanics | Seminars 10

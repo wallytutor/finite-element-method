@@ -65,3 +65,13 @@ learning methodology.
 1. [STEP import and manipulation, geometry partitioning](t20.geo)
 
 1. [Mesh partitioning](t21.geo)
+
+## Projects
+
+1. Conceive a reasonably complex mesh with boundary layers
+
+1. Use a STL file exported from external CAD for 3D meshing
+
+## Useful links
+
+- [Tutorial by SAE Miller](https://www.youtube.com/playlist?list=PLbiOzt50Bx-l2QyX5ZBv9pgDtIei-CYs_)
