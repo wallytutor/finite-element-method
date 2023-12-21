@@ -45,12 +45,14 @@ learning methodology.
     - In Gmsh a `View` is a post-processing dataset maniputation
     - For large datasets do not use *parsed* format, but MSH instead
     - Text in 2D and 3D are created with `T2` and `T3` (also see t4.geo)
-    - It is possible to export animations directly from *time steps*.
+    - It is possible to export animations directly from *time steps*
 
 1. [Plugins](t9.geo)
-    - Interesting maniputation but need to check how to get any data.
+    - Interesting maniputation but need to check how to get any data
 
 1. [Mesh size fields](t10.geo)
+    - Combining `Distance` and `Threshold` we can refine mesh near features
+    - Using `Mesh.Algorithm = 5;` is recommended for complex gradients of mesh
 
 1. [Unstructured quadrangular meshes](t11.geo)
 
@@ -76,9 +78,9 @@ learning methodology.
 
 ## Projects
 
-1. Conceive a reasonably complex mesh with boundary layers
-
-1. Use a STL file exported from external CAD for 3D meshing
+- [x] Conceive a reasonably complex mesh with boundary layers
+- [ ] Use a STL file exported from external CAD/Blender for 3D meshing
+- [ ] Create a progressive tutorial with all learned resources but for a fixed geometry
 
 ## Useful links
 
