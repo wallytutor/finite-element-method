@@ -55,6 +55,7 @@ Complementary studies to take at any time during the series:
 - The first 4 videos of [this](https://www.youtube.com/playlist?list=PLjEaoINr3zgEPv5y--4MKpciLaoQYZB1Z) playlist.
 - The first 5 videos of [this](https://www.youtube.com/playlist?list=PLjEaoINr3zgHJVJF3T3CFUAZ6z11jKg6a) playlist.
 - This [video](https://www.youtube.com/watch?v=LKERWfQYa-8) and the sequence (no playlist created).
+- This [video](https://www.youtube.com/watch?v=cBflsSEJQ9E) with a full Gmsh introduction.
 
 <details>
 <summary>Week 1</summary><br>
