@@ -120,8 +120,8 @@ Mesh.MeshSizeFromPoints = 0;
 Mesh.MeshSizeExtendFromBoundary = 1;
 Mesh.MeshSizeFromCurvature = 0;
 Mesh.Smoothing = 100;
-Mesh.SaveAll = 1;
-Mesh.MshFileVersion = 2.2;
-Mesh 2;
+// Mesh.SaveAll = 1;
+// Mesh.MshFileVersion = 2.2;
+// Mesh 3;
 
-Save "geometry.msh2";
+// Save "geometry.msh2";
