@@ -17,6 +17,8 @@ It is not my first time trying this and I learned a few things in the past failu
 1. During the years I have tested several FEM packages and libraries. The most promissing FEM package in the open source world is certainly [FEniCSx](https://fenicsproject.org/), but it comes with the disadvantage of requiring Linux/WSL and having an unclear documentation. In terms of power I couldn't find anything comparable to [MOOSE](https://mooseframework.inl.gov/index.html) - if you see the list of developer labs it becomes pretty clear why - but it is something to experienced FEM users since it requires low level implementation of the problems in C++. [Elmer](https://www.csc.fi/web/elmer) could be a candidate package for learning the practice, but for going into the mathematics of FEM it is not the right tool. Next comes [Kratos](https://github.com/KratosMultiphysics/Kratos) but its documentation is messy and things moved around too much over the years. Finally we have [FreeFEM++](https://freefem.org/). It is a pretty old software what means that it outlived most of the other applications and now is very stable. What is interesting about FreeFEM++ is its portability across operating systems and good documentation. In what follows I will stick with FreeFEM++ and later with FEniCSx.
 
 1. Learning a numerical method for continuum mechanics is essentially useless without the capacity to apply it to real world geometries. Unfortunatelly the field of open source CAD is very poor so we have just a few options. Although [Gmsh](https://gmsh.info/doc/texinfo/gmsh.html) is pretty powerfull with respect to its meshing capabilities, conceiving the geometry with the software can quickly scale to *trigonometry hell* level. I have been using the software for many years for 2D cases but systematically fall back to proprietary software when things become complex. In this study I intend to reach a *sorcerer Gmsh* mastery level. It can be complemented by STL files generation with [Blender](https://www.blender.org/) or CAD in [FreeCAD](https://www.freecad.org/).
+
+1. Advanced post-processing is also a *must*, so we will also follow some tutorials to improve [ParaView](https://www.paraview.org/) skills.
 </details>
 
 ## Software version
@@ -27,6 +29,9 @@ In what follows we will be using exclusivelly the following software:
 
 - Gmsh 4.11.1
 - FreeFEM++ 4.13
+- ParaView 5.10.1
+- FreeCAD 0.21.1
+- Blender 4.0.2
 
 Processing utilities in Julia and/or Python will have their own versioning so they are not reported here.
 
@@ -44,6 +49,12 @@ For materials that were not cited above, here follow the links:
 - [Intro to the Finite Element Method | Lectures](https://www.youtube.com/playlist?list=PLLSzlda_AXa3yQEJAb5JcmsVDy9i9K_fi)
 
 The book series by O.C. Zienkiewicz and collaborators will be included later since its in depth and general approach trespasses my current capacity on how to organize their study. After learning the basics over the next months I hope to be able to skecth a learning strategy to go over those books and feed this time-line.
+
+Complementary studies to take at any time during the series:
+
+- The first 4 videos of [this](https://www.youtube.com/playlist?list=PLjEaoINr3zgEPv5y--4MKpciLaoQYZB1Z) playlist.
+- The first 5 videos of [this](https://www.youtube.com/playlist?list=PLjEaoINr3zgHJVJF3T3CFUAZ6z11jKg6a) playlist.
+- This [video](https://www.youtube.com/watch?v=LKERWfQYa-8) and the sequence (no playlist created).
 
 <details>
 <summary>Week 1</summary><br>
@@ -91,6 +102,7 @@ The book series by O.C. Zienkiewicz and collaborators will be included later sin
 - [ ] Engineering Statics | Lectures videos 19 to 22
 - [ ] Intro to Continuum Mechanics | Seminars 3
 - [ ] Intro to the Finite Element Method | Lectures 4
+- [ ] Follow [these](https://www.youtube.com/playlist?list=PL6fjYEpJFi7W6ayU8zKi7G0-EZmkjtbPo) ParaView tutorials.
 </details>
 
 <details>
@@ -101,6 +113,7 @@ The book series by O.C. Zienkiewicz and collaborators will be included later sin
 - [ ] Engineering Statics | Lectures videos 23 to 24
 - [ ] Intro to Continuum Mechanics | Seminars 4
 - [ ] Intro to the Finite Element Method | Lectures 5
+- [ ] Follow [these](https://www.youtube.com/playlist?list=PLvkU6i2iQ2fpcVsqaKXJT5Wjb9_ttRLK-) ParaView tutorials.
 </details>
 
 <details>
@@ -110,6 +123,7 @@ The book series by O.C. Zienkiewicz and collaborators will be included later sin
 - [ ] Langtangen (2016), chapter 3 (3/5) 
 - [ ] Intro to Continuum Mechanics | Seminars 5
 - [ ] Intro to the Finite Element Method | Lectures 6
+- [ ] Follow [this](https://www.youtube.com/watch?v=aVlOcc828uM) ParaView seminar.
 </details>
 
 <details>
@@ -119,6 +133,7 @@ The book series by O.C. Zienkiewicz and collaborators will be included later sin
 - [ ] Langtangen (2016), chapter 3 (4/5) 
 - [ ] Intro to Continuum Mechanics | Seminars 6
 - [ ] Intro to the Finite Element Method | Lectures 7
+- [ ] Follow [this](https://www.youtube.com/watch?v=fGcD4dC6Pug&t=5s) ParaView seminar.
 </details>
 
 <details>
@@ -129,6 +144,7 @@ The book series by O.C. Zienkiewicz and collaborators will be included later sin
 - [ ] Barzegari's  notebook associated to Langtangens chapter 3
 - [ ] Intro to Continuum Mechanics | Seminars 7
 - [ ] Intro to the Finite Element Method | Lectures 8
+- [ ] Follow [this](https://www.youtube.com/watch?v=7WMaHXLK6No) ParaView seminar.
 </details>
 
 <details>
@@ -138,6 +154,7 @@ The book series by O.C. Zienkiewicz and collaborators will be included later sin
 - [ ] Langtangen (2016), chapter 4 (1/2) 
 - [ ] Intro to Continuum Mechanics | Seminars 8
 - [ ] Intro to the Finite Element Method | Lectures 9
+- [ ] Follow [this](https://www.youtube.com/watch?v=knWz0LCSgic) ParaView seminar.
 </details>
 
 <details>
@@ -148,6 +165,7 @@ The book series by O.C. Zienkiewicz and collaborators will be included later sin
 - [ ] Barzegari's  notebook associated to Langtangens chapter 4
 - [ ] Intro to Continuum Mechanics | Seminars 9
 - [ ] Intro to the Finite Element Method | Lectures 10
+- [ ] Follow [this](https://www.youtube.com/watch?v=J6PTrFUFD00) ParaView seminar.
 </details>
 
 <details>
@@ -157,6 +175,7 @@ The book series by O.C. Zienkiewicz and collaborators will be included later sin
 - [ ] Nithiarasu (2016), chapter 9
 - [ ] Langtangen (2016), chapter 5 (1/3) 
 - [ ] Intro to Continuum Mechanics | Seminars 10
+- [ ] Follow [this](https://www.youtube.com/watch?v=IXXDxM62tUU) ParaView seminar.
 </details>
 
 <details>
