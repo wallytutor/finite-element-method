@@ -16,6 +16,9 @@ Line(4) = {4, 1};
 Curve Loop(5) = {1,2,3,4};
 Plane Surface(6) = {5};
 
+// Testing with quadrangles.
+// Recombine Surface{6};
+
 // Say we would like to obtain mesh elements with size lc/30 near curve 2 and
 // point 5, and size lc elsewhere. To achieve this, we can use two fields:
 // "Distance", and "Threshold". We first define a Distance field (`Field[1]') on

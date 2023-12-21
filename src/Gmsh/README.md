@@ -55,6 +55,10 @@ learning methodology.
     - Using `Mesh.Algorithm = 5;` is recommended for complex gradients of mesh
 
 1. [Unstructured quadrangular meshes](t11.geo)
+    - Recombination of all surfaces with `Recombine Surface {:};`
+    - Alternativelly one can use `Mesh.RecombineAll` flag
+    - `Mesh.Algorithm = 8;` allows mostly right triangles
+    - Algorithm can be controlled through `Mesh.RecombinationAlgorithm`
 
 1. [Cross-patch meshing with compounds](t12.geo)
 
