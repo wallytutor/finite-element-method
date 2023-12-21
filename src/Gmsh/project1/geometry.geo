@@ -57,7 +57,7 @@ df = 0.08 + 0.5*(d0-e0);
 finthick = 0.010;
 
 // First cell thickness over shell [m]
-shellbl = 0.008;
+shellbl = 0.003;
 
 // -----------------------------------------------------------------------------
 //
@@ -135,6 +135,7 @@ clk = newll;  Curve Loop(clk) = {l12, l13, l14, -l17};
 //
 // -----------------------------------------------------------------------------
 
+idl = 1;
 idk = 1;
 
 Macro MakeFin
@@ -176,22 +177,40 @@ Macro MakeFin
     l04 = newl; Line(l04) = {p04, p01};
 
     // Store CL for later subtraction of main surface.
-    theloops[idk] = newcl;
-    Curve Loop(theloops[idk]) = {l01, l02, l03, l04};
+    theloops[idl] = newcl;
+    Curve Loop(theloops[idl]) = {l01, l02, l03, l04};
 
-    Field[idk] = BoundaryLayer;
-    Field[idk].AnisoMax = 0.1;
-    Field[idk].Quads = 1;
-    Field[idk].Thickness = 0.1;
-    Field[idk].CurvesList = {l01, l02, l03, l04};
-    Field[idk].Ratio = 1.2;
-    Field[idk].Size = 0.001;
-    Field[idk].SizeFar = 0.05;
-    Field[idk].IntersectMetrics = 1;
-    BoundaryLayer Field = idk;
+    firstcell = 0.001;
+    farcell = 0.05;
+    blthick = 0.01;
+
+    Field[idk+0] = Distance;
+    Field[idk+0].CurvesList = {l01, l02, l03, l04};
+    Field[idk+0].Sampling = 10;
+
+    Field[idk+1] = Threshold;
+    Field[idk+1].InField = idk+0;
+    Field[idk+1].SizeMin = 10*firstcell;
+    Field[idk+1].SizeMax = farcell;
+    Field[idk+1].DistMin = blthick;
+    Field[idk+1].DistMax = 0.5;
+
+    Field[idk+2] = BoundaryLayer;
+    Field[idk+2].AnisoMax = 0.1;
+    Field[idk+2].Quads = 1;
+    Field[idk+2].Thickness = blthick;
+    Field[idk+2].CurvesList = {l01, l02, l03, l04};
+    Field[idk+2].Ratio = 1.2;
+    Field[idk+2].Size = firstcell;
+    Field[idk+2].SizeFar = 10*firstcell;
+    Field[idk+2].IntersectMetrics = 1;
+    
+    Background Field = idk+1;
+    BoundaryLayer Field = idk+2;
 
     // Increment counter.
-    idk = idk + 1;
+    idl += 1;
+    idk += 3;
 Return
 
 // -----------------------------------------------------------------------------
@@ -235,7 +254,9 @@ Transfinite Curve{13, -17} = 25;
 Transfinite Surface{ps2};
 Recombine Surface {ps1, ps2};
 
-Extrude {0, 0, 0.2} { Surface{ps1, ps2}; Layers{1}; Recombine; }
+Compound Curve{1:7, 14, 15, 16};
+Compound Curve{9:12};
+Compound Surface{ps1, ps2};
 
 // -----------------------------------------------------------------------------
 //
@@ -243,17 +264,17 @@ Extrude {0, 0, 0.2} { Surface{ps1, ps2}; Layers{1}; Recombine; }
 //
 // -----------------------------------------------------------------------------
 
-Field[4] = BoundaryLayer;
-Field[4].CurvesList = {1:7};
-Field[4].PointsList= {1, 8};    
-Field[4].AnisoMax = 0.1;
-Field[4].Quads = 1;
-Field[4].Thickness = 0.1;
-Field[4].Ratio = 1.1;
-Field[4].Size = shellbl;
-Field[4].SizeFar = 0.05;
-Field[4].IntersectMetrics = 1;
-BoundaryLayer Field = 4;
+Field[idk] = BoundaryLayer;
+Field[idk].CurvesList = {1:7, 9, 10, 11, 12};
+Field[idk].PointsList= {1, 8, 13, 14};    
+Field[idk].AnisoMax = 0.1;
+Field[idk].Quads = 1;
+Field[idk].Thickness = 0.02;
+Field[idk].Ratio = 1.1;
+Field[idk].Size = shellbl;
+Field[idk].SizeFar = 0.05;
+Field[idk].IntersectMetrics = 1;
+BoundaryLayer Field = idk;
 
 // Field[5] = BoundaryLayer;
 // Field[5].AnisoMax = 0.1;
@@ -273,14 +294,16 @@ BoundaryLayer Field = 4;
 //
 // -----------------------------------------------------------------------------
 
-Physical Volume("volume") = {1, 2};
-Physical Surface("frontAndBack") = {1, 2, 30, 36};
-Physical Surface("inlet") = {33};
-Physical Surface("outlet") = {11};
-Physical Surface("flap1") = {18, 19, 20, 21};
-Physical Surface("flap2") = {22, 23, 24, 25};
-Physical Surface("flap3") = {26, 27, 28, 29};
-Physical Surface("shell") = {4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 16, 17, 32, 34};
+// Extrude {0, 0, 0.2} { Surface{ps1, ps2}; Layers{1}; Recombine; }
+
+// Physical Volume("volume") = {1, 2};
+// Physical Surface("frontAndBack") = {1, 2, 30, 36};
+// Physical Surface("inlet") = {33};
+// Physical Surface("outlet") = {11};
+// Physical Surface("flap1") = {18, 19, 20, 21};
+// Physical Surface("flap2") = {22, 23, 24, 25};
+// Physical Surface("flap3") = {26, 27, 28, 29};
+// Physical Surface("shell") = {4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 16, 17, 32, 34};
 
 // -----------------------------------------------------------------------------
 //
@@ -288,12 +311,16 @@ Physical Surface("shell") = {4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 16, 17, 32, 34};
 //
 // -----------------------------------------------------------------------------
 
+// Mesh.MeshSizeExtendFromBoundary = 0;
+// Mesh.MeshSizeFromPoints = 0;
+// Mesh.MeshSizeFromCurvature = 0;
+
 Mesh.SaveAll = 1;
 Mesh.MshFileVersion = 2.2;
 Mesh.MeshSizeFactor = 0.5;
 Mesh.MeshSizeMin = 0.0005;
 Mesh.MeshSizeMax = 0.10;
-Mesh.Algorithm = 6;
+Mesh.Algorithm = 5;
 Mesh.Smoothing = 200;
 
 // Mesh 1;
