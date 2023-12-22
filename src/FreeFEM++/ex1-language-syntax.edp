@@ -1,110 +1,227 @@
 // FreeFem++ language basics
 
-// FreeFem++ languange uses as C++-like syntax. For declaring new
-// variables it should be straightforward for C++ users:
-bool flag = false;
-int i, j, k;
-real a = 3.14, b = pi, c;
-complex d;
+// ----------------------------------------------------------------------------
+// PART 01 - FUNDAMENTALS
+// ----------------------------------------------------------------------------
 
-// Standard I/O also uses bit-shift as C++ (without namespace): 
-// cout << "Enter a value for c:" << endl;
-// cin >> c;
-// cout << "The value of c = " << c << endl;
+// First steps:
+{
+    // FreeFem++ languange uses as C++-like syntax. For declaring new
+    // variables it should be straightforward for C++ users:
+    bool flag = false;
+    int i, j, k;
+    real a = 3.14, b = pi, c;
+    complex d;
 
-// Both `cout` and `cerr` can be used:
-cout << ">> a = " << a << endl;
-cerr << ">> b = " << b << endl;
+    // Standard I/O also uses bit-shift as C++ (without namespace): 
+    // cout << "Enter a value for c:" << endl;
+    // cin >> c;
+    // cout << "The value of c = " << c << endl;
 
-// Attribution of values works with `=` sign:
-a = 1;
-b = 2;
-a = b;
+    // Both `cout` and `cerr` can be used:
+    cout << ">> a = " << a << endl;
+    cerr << ">> b = " << b << endl;
 
-i = 0;
-j = 1;
+    // Attribution of values works with `=` sign:
+    a = 1;
+    b = 2;
+    a = b;
 
-// Basic output for numeric types:
-cout << "\n--- Integer and real numbers ---" << endl;
-cout << ">>       1+3 = " << 1+3 << " " << 1/3 << "\n";
-cout << ">>  10^(+10) = " << 10^(+10) << "\n";
-cout << ">>  10^(-10) = " << 10^(-10) << "\n";
-cout << ">> 5-10^(-2) = " << 5 - 10^(-2) << " == 4.99\n";
-cout << ">> 5+10^(-2) = " << 5 + 10^(-2) << " == 5.01\n";
+    i = 0;
+    j = 1;
 
-// Basic output for complex numbers:
-cout << "\n--- Complex numbers ---" << endl;
-cout << ">> 10-10i = " << 10 - 10i << endl;
-cout << ">>      d = " << d << endl;
+    // Basic output for numeric types:
+    cout << "\n--- Integer and real numbers ---" << endl;
+    cout << ">>       1+3 = " << 1+3 << " " << 1/3 << "\n";
+    cout << ">>  10^(+10) = " << 10^(+10) << "\n";
+    cout << ">>  10^(-10) = " << 10^(-10) << "\n";
+    cout << ">> 5-10^(-2) = " << 5 - 10^(-2) << " == 4.99\n";
+    cout << ">> 5+10^(-2) = " << 5 + 10^(-2) << " == 5.01\n";
 
-// Setting number display precision:
-int prec = cout.precision(12);
-cout << "\nPrecision before calling cout.precision " << prec << endl;
+    // Basic output for complex numbers:
+    cout << "\n--- Complex numbers ---" << endl;
+    cout << ">> 10-10i = " << 10 - 10i << endl;
+    cout << ">>      d = " << d << endl;
 
-// Basic output for scientific notation:
-cout.scientific;
-cout << "\n--- Scientific notation ---\n";
-cout << ">> " << "-1^(1/3) = " << (-1+0i)^(1.0/3.0) << " (precision=12)\n";
+    // Setting number display precision:
+    int prec = cout.precision(12);
+    cout << "\nPrecision before calling cout.precision " << prec << endl;
 
-// Fallback to previous precision and get fixed+showpos:
-cout.precision(prec);
-cout.fixed;
-cout.showpos;
-cout << "\n--- Fixed and showpos ---\n";
-cout << "-1^(1/3) = " << (-1+0i)^(1./3.) << " (precision=" << prec << ")\n";
+    // Basic output for scientific notation:
+    cout.scientific;
+    cout << "\n--- Scientific notation ---\n";
+    cout << ">> " << "-1^(1/3) = " << (-1+0i)^(1.0/3.0) << " (precision=12)\n";
 
-// ... deactivate showpos:
-cout.noshowpos;
-cout << "\n--- noshowpos ---\n";
-cout << "8^(1/3)= " << (8)^(1./3.) << endl;
-cout << "sqrt(-1) = " << sqrt(-1+0i) << endl;
+    // Fallback to previous precision and get fixed+showpos:
+    cout.precision(prec);
+    cout.fixed;
+    cout.showpos;
+    cout << "\n--- Fixed and showpos ---\n";
+    cout << "-1^(1/3) = " << (-1+0i)^(1./3.) << " (precision=" << prec << ")\n";
 
-// ... and reset cout to default:
-d = 10 + 1i;
-cout.default;
-cout << "\n--- Default ---\n";
-cout << "      d  = " << d << "\n"
-     << " real(d) = " << real(d) << "\n"
-     << " conj(d) = " << conj(d) << "\n"
-     << "  arg(d) = " << arg(d)
-     << endl;
+    // ... deactivate showpos:
+    cout.noshowpos;
+    cout << "\n--- noshowpos ---\n";
+    cout << "8^(1/3)= " << (8)^(1./3.) << endl;
+    cout << "sqrt(-1) = " << sqrt(-1+0i) << endl;
 
-// Increment/decrement operator:
-cout << "\n--- Increment operator ---\n";
-cout << ">> ++i = " << ++i << endl;
-cout << ">>   i = " << i   << endl;
-cout << ">> i++ = " << i++ << endl;
-cout << ">>   i = " << i   << endl;
-cout << ">> --j = " << --j << endl; // Seems to be a bug!
-cout << ">>   j = " << j   << endl;
-cout << ">> j-- = " << j-- << endl;
-cout << ">>   j = " << j   << endl;
+    // ... and reset cout to default:
+    d = 10 + 1i;
+    cout.default;
+    cout << "\n--- Default ---\n";
+    cout << "      d  = " << d << "\n"
+        << " real(d) = " << real(d) << "\n"
+        << " conj(d) = " << conj(d) << "\n"
+        << "  arg(d) = " << arg(d)
+        << endl;
 
-// String manipulations:
-cout << "\n--- String concatenation ---\n";
-string str0, str1;
-str0 = "My name is";
-str1 = "Walter";
-str0 = str0 +  " " + str1;
-str0 = str0 + " " + 2 ;
-cout << ">> str0 = " << str0 << endl;
+    // Increment/decrement operator:
+    cout << "\n--- Increment operator ---\n";
+    cout << ">> ++i = " << ++i << endl;
+    cout << ">>   i = " << i   << endl;
+    cout << ">> i++ = " << i++ << endl;
+    cout << ">>   i = " << i   << endl;
+    cout << ">> --j = " << --j << endl; // Seems to be a bug!
+    cout << ">>   j = " << j   << endl;
+    cout << ">> j-- = " << j-- << endl;
+    cout << ">>   j = " << j   << endl;
 
-// Delimited scope:
+    // String manipulations:
+    cout << "\n--- String concatenation ---\n";
+    string str0, str1;
+    str0 = "My name is";
+    str1 = "Walter";
+    str0 = str0 +  " " + str1;
+    str0 = str0 + " " + 2 ;
+    cout << ">> str0 = " << str0 << endl;
+}
+
+// First loop and ternary operator:
 {
     real a = 0;
     for (int i = 0; i < 10; i++) {
         a += i*i;
+        cout << ">> a = " << a << endl;
     }
 
-    cout << ">> a = " << a << endl;
-	
     // example of if arithmetic expression
-	real aIsNull    = a == 0 ? a : -1;
-	real aIsNotNull = a != 0 ? a : -1;
-	cout << ">> a if a is 0     else -1 = " << aIsNull << endl;
-	cout << ">> a if a is not 0 else -1 = " << aIsNotNull << endl;
+    real aIsNull    = a == 0 ? a : -1;
+    real aIsNotNull = a != 0 ? a : -1;
+    cout << ">> a if a is 0     else -1 = " << aIsNull << endl;
+    cout << ">> a if a is not 0 else -1 = " << aIsNotNull << endl;
  
     string ss = "\z\a\b\f\\--\\";
     cout << "\"" << ss << "\"" << endl;
+}
+
+// ----------------------------------------------------------------------------
+// PART 02 - ARRAYS
+// ----------------------------------------------------------------------------
+
+// Introduction to arrays:
+{
+  // Declare real arrays of size 10 indexed by integers.
+  real [int] rtab0(10);
+  real [int] rtab1(10);
+
+  // Declare complex arrays of size 10 indexed by integers.
+  complex [int] ctab0(10), ctab1(10);
+
+  // Elements can be set all at once...
+  rtab0 = 1;
+  ctab0 = 1+2i;
+
+  // ... or by accessing an specific index.
+  rtab0[1] = 2;
+  ctab0[1] = 2; // Valid because "R" in "C": 2 + 0i
+
+  // Sizes can be accessed by attribute `n`:
+  cout << ">> len(rtab0) = " << rtab0.n 
+      << " " << rtab0[1] << " " << rtab0[9] << endl;
+  cout << ">> len(ctab0) = " << ctab0.n 
+      << " " << ctab0[1] << " " << ctab0[9] << endl;
+
+  // Arrays support full range attribution:
+  rtab1 = rtab0;
+
+  // And other elementwise operations.
+  rtab0 = rtab0 + rtab1;
+  rtab0 = 2*rtab0 + 5*rtab1;
+  rtab1 = 2*rtab0 - 5*rtab1;
+  rtab0 += rtab0;
+  cout << ">> rtab0 = " << rtab0 << endl;
+  cout << ">> rtab1 = " << rtab1 << endl;
+
+  ctab1 = ctab0;
+  ctab0 = ctab0 + ctab1;
+  ctab0 = 2*ctab0 + 5*ctab1;
+  ctab1 = 2*ctab0 - 5*ctab1;
+  ctab0 += ctab0;
+  cout << ">> ctab0 = " << ctab0 << endl;
+  cout << ">> ctab1 = " << ctab1 << endl;
+}
+
+// Examples with map:
+{
+  // A *map* can be created by setting keys to string:
+  real [string] map;
+
+  // It works essentially the same way as an array.
+  map["1"] = 2.0;
+
+  // 2 is automaticaly cast to the string "2"
+  map[2] = 3.0;
+
+  // Notice below the access of map["2"] instead of map[2]:
+  cout << ">> map[1] = " << map["1"] << " == 2.0" << endl;
+  cout << ">> map[2] = " << map["2"] << " == 3.0" << endl;
+}
+
+// Table resizing:
+{
+    real [int] tab = [1, 2, 3, 3.14, pi];
+    cout << ">> tab = " << tab << endl;
+
+    tab.resize(10);
+    for (int i = 5; i < 10; i++) tab[i] = i;
+    cout << ">> tab = " << tab << endl;
+}
+
+// Multidimensional arrays:
+{
+    int k = 10;
+    real [int, int] mat0(k, k), mat1(k, k);
+    mat0 = 0;
+
+    for(int i = 0; i < mat0.n; i++)
+        for(int j = 0; j < mat0.m; j++)
+            mat0(i, j) = i + 100 * (j + 1);
+
+    mat1 = mat0;
+    mat0.resize(15, 15);
+
+    cout << ">> mat0 = " << mat0 << endl;
+    cout << ">> mat1 = " << mat1 << endl;
+}
+
+// Elementwise ternary operation:
+{
+    real[int]  a(5), b(5), c(5), d(5);
+    a = 1;
+    b = 2;
+    c = 3;
+
+    // A zero evaluates to false
+    a[2] = 0;
+
+
+    d = (a ? b : c);
+    cout << ">> (a ? b : c) = " << d << endl;
+
+    d = (a ? 1 : 10);
+    cout << ">> (a ? 1 : 10) = " << d << endl;
+
+    d = (a ? b : -1);
+    cout << ">> (a ? b : -1) = " << d << endl;
 }
 
