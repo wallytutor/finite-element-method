@@ -171,25 +171,25 @@ syn keyword ffFunctionSystem     dumptable
 syn keyword ffFunctionSystem     exec
 syn keyword ffFunctionSystem     exit
 
-syn keyword ffGlobal             area 
-syn keyword ffGlobal             cin 
-syn keyword ffGlobal             cout 
-syn keyword ffGlobal             cerr 
-syn keyword ffGlobal             HaveUMFPACK 
-syn keyword ffGlobal             hTriangle 
-syn keyword ffGlobal             label 
-syn keyword ffGlobal             lenEdge 
-syn keyword ffGlobal             N 
+syn keyword ffGlobal             area
+syn keyword ffGlobal             cin
+syn keyword ffGlobal             cout
+syn keyword ffGlobal             cerr
+syn keyword ffGlobal             HaveUMFPACK
+syn keyword ffGlobal             hTriangle
+syn keyword ffGlobal             label
+syn keyword ffGlobal             lenEdge
+syn keyword ffGlobal             N
 syn keyword ffGlobal             NoUseOfWait
-syn keyword ffGlobal             nTonEdge 
-syn keyword ffGlobal             nuEdge 
-syn keyword ffGlobal             nuTriangle 
-syn keyword ffGlobal             P 
-syn keyword ffGlobal             region 
-syn keyword ffGlobal             verbosity 
-syn keyword ffGlobal             version 
-syn keyword ffGlobal             x 
-syn keyword ffGlobal             y 
+syn keyword ffGlobal             nTonEdge
+syn keyword ffGlobal             nuEdge
+syn keyword ffGlobal             nuTriangle
+syn keyword ffGlobal             P
+syn keyword ffGlobal             region
+syn keyword ffGlobal             verbosity
+syn keyword ffGlobal             version
+syn keyword ffGlobal             x
+syn keyword ffGlobal             y
 syn keyword ffGlobal             z
 
 syn keyword ffmethodCoordo       x
@@ -200,6 +200,7 @@ syn keyword ffmethodFespace      ndof
 syn keyword ffmethodFespace      ndofK
 
 syn keyword ffmethodStream       default
+syn keyword ffmethodStream       fixed
 syn keyword ffmethodStream       noshowbase
 syn keyword ffmethodStream       noshowpos
 syn keyword ffmethodStream       showbase
@@ -282,11 +283,11 @@ syn keyword ffParameter          nbvx
 syn keyword ffParameter          ncv
 syn keyword ffParameter          nomeshgeneration
 syn keyword ffParameter          omega
-syn keyword ffParameter          op 
-syn keyword ffParameter          optimize 
-syn keyword ffParameter          periodic 
-syn keyword ffParameter          power 
-syn keyword ffParameter          precon 
+syn keyword ffParameter          op
+syn keyword ffParameter          optimize
+syn keyword ffParameter          periodic
+syn keyword ffParameter          power
+syn keyword ffParameter          precon
 syn keyword ffParameter          ps
 syn keyword ffParameter          qfe
 syn keyword ffParameter          qfnbpE
@@ -294,12 +295,12 @@ syn keyword ffParameter          qfnbpT
 syn keyword ffParameter          qforder
 syn keyword ffParameter          qft
 syn keyword ffParameter          ratio
-syn keyword ffParameter          rescaling 
-syn keyword ffParameter          save 
-syn keyword ffParameter          sigma 
-syn keyword ffParameter          solver 
-syn keyword ffParameter          split 
-syn keyword ffParameter          splitin2 
+syn keyword ffParameter          rescaling
+syn keyword ffParameter          save
+syn keyword ffParameter          sigma
+syn keyword ffParameter          solver
+syn keyword ffParameter          split
+syn keyword ffParameter          splitin2
 syn keyword ffParameter          splitpbedge
 syn keyword ffParameter          strategy
 syn keyword ffParameter          sym
@@ -350,7 +351,7 @@ syn keyword ffType               string
 syn keyword ffType               varf
 
 " syn keyword ffUnclear
- 
+
 " -----------------------------------------------------------------------------
 " Default highlighting
 " -----------------------------------------------------------------------------
@@ -362,7 +363,7 @@ HiLink ffConstantEF           Constant
 HiLink ffConstantNum          Number
 HiLink ffConstantQF           Constant
 HiLink ffConstantSolver       Constant
-HiLink ffFunctionField        Function   
+HiLink ffFunctionField        Function
 HiLink ffFunctionDiff         Function
 HiLink ffFunctionFE           Function
 HiLink ffFunctionInt          Function
@@ -382,8 +383,8 @@ HiLink ffmethodStream         Function
 HiLink ffmethodString         Function
 HiLink ffmethodVector         Function
 HiLink ffParameter            Function
-HiLink ffSyntax               Statement 
-HiLink ffType                 Type 
+HiLink ffSyntax               Statement
+HiLink ffType                 Type
 HiLink ffUnclear              Error         " En attendant...
 
 delcommand HiLink
