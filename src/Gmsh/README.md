@@ -61,6 +61,8 @@ learning methodology.
     - Algorithm can be controlled through `Mesh.RecombinationAlgorithm`
 
 1. [Cross-patch meshing with compounds](t12.geo)
+    - Curves and surfaces can be enforced to be meshed as a whole.
+    - Limited to simple shapes, for more complex the next see the tutorials.
 
 1. [Remeshing an STL file without an underlying CAD model](t13.geo)
 
