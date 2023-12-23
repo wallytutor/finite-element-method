@@ -45,12 +45,13 @@ getfiles(ext) = sort(filter(x->endswith(x, ext), readdir(@__DIR__())))
 md"""
 |         |                                             |
 |--------:|:--------------------------------------------|
-| Script  | $(@bind fname Select(getfiles(".edp")))     |
-| Example | $(@bind exno Select(1:10)) |
+ Script  | $(@bind fname Select(getfiles(".edp")))
+ Example | $(@bind exno Select(1:10))
+ $(@bind go Button("Run")) |
 """
 
 # ╔═╡ 6a512646-a15a-4092-83e3-d5b9c6639b45
-freefem(fname, exno);
+go; freefem(fname, exno);
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """

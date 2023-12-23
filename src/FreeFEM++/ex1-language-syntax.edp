@@ -13,16 +13,19 @@ if (example <= 0) {
     cout << ">> Provide `-example` with value > 0 to run an example" << endl;
 }
 
+macro header(t) cout << "*** " << t << " ***\n" << endl;//
+
 // ----------------------------------------------------------------------------
 // PART 01 - FUNDAMENTALS
 // ----------------------------------------------------------------------------
 
-// First steps:
 if (example == 1) {
+    header("FreeFem++ basics");
+
     // FreeFem++ languange uses as C++-like syntax. For declaring new
     // variables it should be straightforward for C++ users:
-    bool flag = false;
-    int i, j, k;
+    int i, j;
+    bool f = false;
     real a = 3.14, b = pi, c;
     complex d;
 
@@ -32,8 +35,8 @@ if (example == 1) {
     // cout << "The value of c = " << c << endl;
 
     // Both `cout` and `cerr` can be used:
-    cout << ">> a = " << a << endl;
-    cerr << ">> b = " << b << endl;
+    cout << ">>         a = " << a << endl;
+    cerr << ">>         b = " << b << endl;
 
     // Attribution of values works with `=` sign:
     a = 1;
@@ -43,88 +46,105 @@ if (example == 1) {
     i = 0;
     j = 1;
 
-    // Basic output for numeric types:
-    cout << "\n--- Integer and real numbers ---" << endl;
+    cout << ">>      flag = " << f << endl;
+    cout << ">>         a = " << a << endl;
+    cerr << ">>         b = " << b << endl;
+    cout << ">>         i = " << i << endl;
+    cout << ">>         j = " << j << endl;
+
+    // Operations with integer and real numbers:
     cout << ">>       1+3 = " << 1+3 << " " << 1/3 << "\n";
     cout << ">>  10^(+10) = " << 10^(+10) << "\n";
     cout << ">>  10^(-10) = " << 10^(-10) << "\n";
     cout << ">> 5-10^(-2) = " << 5 - 10^(-2) << " == 4.99\n";
     cout << ">> 5+10^(-2) = " << 5 + 10^(-2) << " == 5.01\n";
 
-    // Basic output for complex numbers:
-    cout << "\n--- Complex numbers ---" << endl;
-    cout << ">> 10-10i = " << 10 - 10i << endl;
-    cout << ">>      d = " << d << endl;
+    // Complex numbers:
+    cout << ">>    10-10i = " << 10 - 10i << endl;
+    cout << ">>         d = " << d << endl;
+}
+
+if (example == 2) {
+    header("Formatting output");
+
+    complex d = -1 + 2i;
 
     // Setting number display precision:
     int prec = cout.precision(12);
-    cout << "\nPrecision before calling cout.precision " << prec << endl;
+    cout << ">> Precision before calling cout.precision " << prec << endl;
 
     // Basic output for scientific notation:
     cout.scientific;
-    cout << "\n--- Scientific notation ---\n";
-    cout << ">> " << "-1^(1/3) = " << (-1+0i)^(1.0/3.0) << " (precision=12)\n";
+    cout << ">>\n>> Scientific notation:" << endl;
+    cout << ">>  (-1+0i)^(1/3) = " << (-1+0i)^(1.0/3.0) << endl;
+    cout << ">>           1000 = " << 1000.0 << endl;
 
     // Fallback to previous precision and get fixed+showpos:
     cout.precision(prec);
     cout.fixed;
     cout.showpos;
-    cout << "\n--- Fixed and showpos ---\n";
-    cout << "-1^(1/3) = " << (-1+0i)^(1./3.) << " (precision=" << prec << ")\n";
+    cout << ">>\n>> Fixed and showpos:" << endl;
+    cout << ">>  (-1+0i)^(1/3) = " << (-1+0i)^(1.0/3.0) << endl;;
 
     // ... deactivate showpos:
     cout.noshowpos;
-    cout << "\n--- noshowpos ---\n";
-    cout << "8^(1/3)= " << (8)^(1./3.) << endl;
-    cout << "sqrt(-1) = " << sqrt(-1+0i) << endl;
+    cout << ">>\n>> With noshowpos:" << endl;
+    cout << ">>       8^(1/3)  = " << (8)^(1./3) << endl;
+    cout << ">>       sqrt(-1) = " << sqrt(-1+0i) << endl;
 
     // ... and reset cout to default:
-    d = 10 + 1i;
     cout.default;
-    cout << "\n--- Default ---\n";
-    cout << "      d  = " << d << "\n"
-        << " real(d) = " << real(d) << "\n"
-        << " conj(d) = " << conj(d) << "\n"
-        << "  arg(d) = " << arg(d)
-        << endl;
+    cout << ">>\n>> Back to defaults:" << endl;
+    cout << ">>             d  = " << d << "\n"
+         << ">>        real(d) = " << real(d) << "\n"
+         << ">>        conj(d) = " << conj(d) << "\n"
+         << ">>         arg(d) = " << arg(d)
+         << endl;
+}
 
-    // Increment/decrement operator:
-    cout << "\n--- Increment operator ---\n";
+if (example == 3) {
+    header("Increment and decrement operators");
+
+    int i = 0;
+
+    cout << ">>   i = " << i   << endl;
     cout << ">> ++i = " << ++i << endl;
     cout << ">>   i = " << i   << endl;
     cout << ">> i++ = " << i++ << endl;
     cout << ">>   i = " << i   << endl;
-    cout << ">> --j = " << --j << endl; // Seems to be a bug!
-    cout << ">>   j = " << j   << endl;
-    cout << ">> j-- = " << j-- << endl;
-    cout << ">>   j = " << j   << endl;
-
-    // String manipulations:
-    cout << "\n--- String concatenation ---\n";
-    string str0, str1;
-    str0 = "My name is";
-    str1 = "Walter";
-    str0 = str0 +  " " + str1;
-    str0 = str0 + " " + 2 ;
-    cout << ">> str0 = " << str0 << endl;
+    cout << ">> --i = " << --i << endl;
+    cout << ">>   i = " << i   << endl;
+    cout << ">> i-- = " << i-- << endl;
+    cout << ">>   i = " << i   << endl;
 }
 
-// First loop and ternary operator:
-if (example == 2) {
-    real a = 0;
+if (example == 4) {
+    header("String concatenation");
+
+    string str0, str1;
+
+    str0 = "\"My name is";
+    str1 = "Walter";
+    str0 = str0 + " " + str1;
+    str0 = str0 + " and I can add a number " + 2 + "\"";
+    cout << ">> " << str0 << endl;
+}
+
+if (example == 5) {
+    header("Ternary operator and for loop");
+
+    real a = 0, b;
+
     for (int i = 0; i < 10; i++) {
-        a += i*i;
+        a += i^2;
         cout << ">> a = " << a << endl;
     }
 
-    // example of if arithmetic expression
-    real aIsNull    = a == 0 ? a : -1;
-    real aIsNotNull = a != 0 ? a : -1;
-    cout << ">> a if a is 0     else -1 = " << aIsNull << endl;
-    cout << ">> a if a is not 0 else -1 = " << aIsNotNull << endl;
-
-    string ss = "\z\a\b\f\\--\\";
-    cout << "\"" << ss << "\"" << endl;
+    b = a == 0 ? a : -1;
+    cout << ">> a if a is 0     else -1 = " << b << endl;
+    
+    b = a != 0 ? a : -1;
+    cout << ">> a if a is not 0 else -1 = " << b << endl;
 }
 
 // ----------------------------------------------------------------------------
@@ -132,7 +152,7 @@ if (example == 2) {
 // ----------------------------------------------------------------------------
 
 // Introduction to arrays:
-if (example == 3) {
+if (example == 999) {
     // Declare real arrays of size 10 indexed by integers.
     real [int] rtab0(10);
     real [int] rtab1(10);
@@ -175,7 +195,7 @@ if (example == 3) {
 }
 
 // More operations with arrays and methods:
-if (example == 4) {
+if (example == 999) {
     int n = 5;
     real[int] a(n), b(n), c(n);
     real [int, int] M(n, n);
@@ -220,7 +240,7 @@ if (example == 4) {
 }
 
 // Examples with map:
-if (example == 5) {
+if (example == 999) {
     // A *map* can be created by setting keys to string:
     real [string] map;
 
