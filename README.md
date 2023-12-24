@@ -57,6 +57,11 @@ Complementary studies to take at any time during the series:
 - This [video](https://www.youtube.com/watch?v=LKERWfQYa-8) and the sequence (no playlist created).
 - This [video](https://www.youtube.com/watch?v=cBflsSEJQ9E) with a full Gmsh introduction.
 
+Review and in-depth studies for solidification of knowledge:
+
+- [Continuum physics](https://www.youtube.com/playlist?list=PLJhG_d-Sp_JHvh47eZ8fSuUCUdp86i__y)
+- [Introduction to finite element methods](https://www.youtube.com/playlist?list=PLJhG_d-Sp_JHKVRhfTgDqbic_4MHpltXZ)
+
 <details>
 <summary>Week 1</summary><br>
 
