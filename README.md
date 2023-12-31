@@ -61,6 +61,7 @@ Review and in-depth studies for solidification of knowledge:
 
 - [Continuum physics](https://www.youtube.com/playlist?list=PLJhG_d-Sp_JHvh47eZ8fSuUCUdp86i__y)
 - [Introduction to finite element methods](https://www.youtube.com/playlist?list=PLJhG_d-Sp_JHKVRhfTgDqbic_4MHpltXZ)
+- [Wolfgang Bangerth's video lectures](https://www.math.colostate.edu/~bangerth/videos.html)
 
 <details>
 <summary>Week 1</summary><br>
