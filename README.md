@@ -69,9 +69,9 @@ Review and in-depth studies for solidification of knowledge:
 - [ ] Follow 21 tutorials provided with Gmsh
 - [x] Follow [this](https://www.youtube.com/playlist?list=PL4eMS3gkRNXcvNnawxzuzRlFDa5CseoQV) short course on FreeCAD.
 - [x] Follow [this](https://www.youtube.com/playlist?list=PL6fjYEpJFi7Wu9ZFlak7r0QgrF0aNi8H1) tutorial on FreeFEM without practicing.
-- [ ] Nithiarasu (2016), chapters 1 and 2
-- [ ] Langtangen (2016), chapters 1 and 2 (1/3)
-- [ ] Barzegari's  notebook associated to Langtangens chapter 1
+- [x] Nithiarasu (2016), chapters 1 and 2
+- [x] Langtangen (2016), chapters 1 and 2 (1/3)
+- [ ] Barzegari's notebook associated to Langtangens chapter 1
 - [ ] Engineering Statics | Lectures videos 1 to 10
 - [ ] Intro to the Finite Element Method | Lectures 1
 </details>
